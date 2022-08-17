@@ -1,15 +1,19 @@
 import { Component } from 'react';
-
+import { Form } from './Form';
 export class App extends Component {
   state = {
     contacts: [],
-    name: '',
   };
 
-  handleAddContact = () => {};
-  handleDeleteContact = () => {};
+  formSubmitHandler = data => {
+    console.log(data);
+  };
 
   render() {
-    return <></>;
+    return (
+      <>
+        <Form onSubmit={this.formSubmitHandler}></Form>
+      </>
+    );
   }
 }
