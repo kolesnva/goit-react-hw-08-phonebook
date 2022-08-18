@@ -1,4 +1,4 @@
 import styled from 'styled-components';
 
-export const Text = styled.span``;
+export const ContactText = styled.span``;
 export const DeleteButton = styled.button``;

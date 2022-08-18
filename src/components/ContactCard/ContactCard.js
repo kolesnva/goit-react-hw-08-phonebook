@@ -1,11 +1,11 @@
 import propTypes from 'prop-types';
-import { Text, DeleteButton } from './ContactCardStyled';
+import { ContactText, DeleteButton } from './ContactCardStyled';
 
 export function ContactCard({ name, number, id, handleDelete }) {
   return (
     <>
-      <Text></Text>
-      <Text></Text>
+      <ContactText>{name}</ContactText>
+      <ContactText>{number}</ContactText>
       <DeleteButton type="button" onClick={() => handleDelete(id)}>
         Delete
       </DeleteButton>
