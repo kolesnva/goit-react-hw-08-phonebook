@@ -21,7 +21,7 @@ export function ContactsList({ contacts, handleDelete }) {
   );
 }
 
-ContactList.prototypes = {
+ContactsList.prototypes = {
   contacts: propTypes.arrayOf(
     propTypes.exact({
       id: propTypes.string.isRequired,
