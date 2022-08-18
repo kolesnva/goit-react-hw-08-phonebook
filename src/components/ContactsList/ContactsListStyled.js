@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const List = styled.ul`
   width: 360px;
   list-style: none;
-  padding: 0px;
+  padding: ${p => p.theme.space[0]}px; ;
 `;
 export const ListItem = styled.li`
   display: flex;
-  gap: 15px;
+  gap: ${p => p.theme.space[4]}px;
   align-items: center;
   justify-content: space-between;
-  padding: 8px;
+  padding: ${p => p.theme.space[3]}px;
 `;
