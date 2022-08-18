@@ -1,23 +1,9 @@
 import styled from 'styled-components';
 
-import {
-  color,
-  space,
-  layout,
-  flexbox,
-  grid,
-  background,
-  border,
-  position,
-} from 'styled-system';
-
-export const Box = styled('div')(
-  color,
-  space,
-  layout,
-  flexbox,
-  grid,
-  background,
-  border,
-  position
-);
+export const Box = styled.section`
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
