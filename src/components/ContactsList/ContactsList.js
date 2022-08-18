@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { List, ListItem } from './ContactsListStyled';
 import { ContactCard } from 'components/ContactCard/ContactCard';
 
-export function ContactsList({ contacts, handleDelete }) {
+export function ContactsList({ contacts, onDeleteContact }) {
   return (
     <List>
       {contacts.map(({ name, id, number }) => {
@@ -12,7 +12,7 @@ export function ContactsList({ contacts, handleDelete }) {
               id={id}
               name={name}
               number={number}
-              handleDelete={handleDelete}
+              onDeleteContact={onDeleteContact}
             ></ContactCard>
           </ListItem>
         );
@@ -29,5 +29,5 @@ ContactsList.propTypes = {
       number: PropTypes.string.isRequired,
     })
   ),
-  handleDelete: PropTypes.func.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };

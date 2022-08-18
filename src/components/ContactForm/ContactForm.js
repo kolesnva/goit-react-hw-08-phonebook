@@ -1,6 +1,7 @@
-import { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Component } from 'react';
 import { Form, Label, Input, Text, AddButton } from './ContactFormStyled';
+import { nanoid } from 'nanoid';
 
 export class ContactForm extends Component {
   state = {
@@ -17,13 +18,13 @@ export class ContactForm extends Component {
 
   handleSubmitForm = event => {
     event.preventDefault();
-    this.props.onSubmit(this.state);
+    this.props.onSubmit({ ...this.state, id: nanoid() });
     this.setState({ name: '', number: '' });
   };
 
   render() {
     return (
-      <Form>
+      <Form onSubmit={this.handleSubmitForm}>
         <Label>
           <Text>Name</Text>
           <Input
