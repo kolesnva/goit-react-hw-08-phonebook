@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { List, ListItem } from './ContactsListStyled';
 import { ContactCard } from 'components/ContactCard/ContactCard';
 
@@ -21,13 +21,13 @@ export function ContactsList({ contacts, handleDelete }) {
   );
 }
 
-ContactsList.prototypes = {
-  contacts: propTypes.arrayOf(
-    propTypes.exact({
-      id: propTypes.string.isRequired,
-      name: propTypes.string.isRequired,
-      number: propTypes.string.isRequired,
+ContactsList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
     })
   ),
-  handleDelete: propTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };

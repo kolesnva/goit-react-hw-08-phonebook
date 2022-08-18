@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Form, Label, Input, Text, AddButton } from './ContactFormStyled';
 
 export class ContactForm extends Component {
@@ -8,7 +8,7 @@ export class ContactForm extends Component {
     number: '',
   };
 
-  static propTypes = { onSubmit: propTypes.func.isRequired };
+  static propTypes = { onSubmit: PropTypes.func.isRequired };
 
   handleInput = event => {
     const { name, value } = event.currentTarget;

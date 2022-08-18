@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { ContactText, DeleteButton } from './ContactCardStyled';
 
 export function ContactCard({ name, number, id, handleDelete }) {
@@ -14,8 +14,8 @@ export function ContactCard({ name, number, id, handleDelete }) {
 }
 
 ContactCard.propTypes = {
-  name: propTypes.string.isRequired,
-  number: propTypes.string.isRequired,
-  id: propTypes.string.isRequired,
-  handleDelete: propTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };
