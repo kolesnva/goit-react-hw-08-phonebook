@@ -4,6 +4,8 @@ import { ContactsList } from './ContactsList/ContactsList';
 import { Filter } from './Filter/Filter';
 import { Box } from 'Box';
 
+const LS_KEY = 'contacts';
+
 export class App extends Component {
   state = {
     contacts: [
@@ -14,6 +16,19 @@ export class App extends Component {
     ],
     filter: '',
   };
+
+  componentDidMount() {
+    const storageContacts = localStorage.getItem(LS_KEY);
+    if (storageContacts) {
+      this.setState({ contacts: JSON.parse(storageContacts) });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts.length !== this.state.contacts.length) {
+      localStorage.setItem(LS_KEY, JSON.stringify(this.state.contacts));
+    }
+  }
 
   handleAddContact = newContact => {
     this.state.contacts.find(contact => contact.name === newContact.name)
