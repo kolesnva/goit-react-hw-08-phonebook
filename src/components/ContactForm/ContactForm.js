@@ -10,7 +10,6 @@ export function ContactForm({ onSubmit }) {
   const handleSubmitForm = event => {
     event.preventDefault();
     onSubmit({ name, number, id: nanoid() });
-    this.setState({ name: '', number: '' });
     resetForm();
   };
 
