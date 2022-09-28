@@ -23,11 +23,12 @@ const store = configureStore({
   reducer: {
     contacts: contactsPersistReducer,
   },
-  middleware: getDefaultMiddleware({
-    serializableCheck: {
-      ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    },
-  }),
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
 
 const persistor = persistStore(store);
