@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Form, Label, Input, Text, AddButton } from './ContactFormStyled';
 import { nanoid } from 'nanoid';
+import { addContact } from 'redux/ContactsListSlice';
 
-export function ContactForm({ onSubmit }) {
+export function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
   const handleSubmitForm = event => {
     event.preventDefault();
-    onSubmit({ name, number, id: nanoid() });
     resetForm();
   };
 
