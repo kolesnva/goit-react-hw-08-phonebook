@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { ContactText, DeleteButton } from './ContactCardStyled';
-// import { deleteContact } from 'redux/ContactsListSlice';
+import { deleteContact } from 'redux/Operations';
 import { useDispatch } from 'react-redux';
 
 export function ContactCard({ name, number, id }) {
