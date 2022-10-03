@@ -1,7 +1,7 @@
 import { Label, Input, Text } from './FilterStyled';
 import { Box } from 'Box';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { getFilter } from 'redux/Selectors';
+import { selectFilter } from 'redux/Selectors';
 import { setFilter } from 'redux/ContactsListSlice';
 
 export function Filter() {
@@ -15,7 +15,7 @@ export function Filter() {
         <Input
           type="text"
           name="filter"
-          value={useSelector(getFilter)}
+          value={useSelector(selectFilter)}
           onChange={changeFilter}
         ></Input>
       </Label>

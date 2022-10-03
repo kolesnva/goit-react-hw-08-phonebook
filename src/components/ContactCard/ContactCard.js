@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 
 export function ContactCard({ name, number, id }) {
   const dispatch = useDispatch();
+
   return (
     <>
       <ContactText>{name}</ContactText>

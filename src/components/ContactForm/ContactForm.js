@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { Form, Label, Input, Text, AddButton } from './ContactFormStyled';
 import { nanoid } from 'nanoid';
 import { addContact } from 'redux/Operations';
-import { getContacts } from 'redux/Selectors';
+import { selectContacts } from 'redux/Selectors';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 
 export function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const handleSubmitForm = event => {
