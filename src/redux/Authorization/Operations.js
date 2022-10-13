@@ -58,6 +58,14 @@ export const refreshUser = createAsyncThunk(
     const sessionToken = state.auth.token;
 
     if (sessionToken === null) {
+      return thunkAPI.rejectWithValue('Failed to get current user!');
+    }
+
+    try {
+      setToken(sessionToken);
+      const { data } = await axios.get('/users/current');
+      return data;
+    } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
