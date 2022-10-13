@@ -10,7 +10,8 @@ function Login() {
 
     const { email, password } = event.currentTarget.elements;
 
-    dispatch(logInUser({}));
+    dispatch(logInUser({ email: email.value, password: password.value }));
+    event.currentTarget.reset();
   };
 
   return (
@@ -29,3 +30,4 @@ function Login() {
     </div>
   );
 }
+export default Login;
