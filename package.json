@@ -4,6 +4,8 @@
   "private": false,
   "homepage": "https://kolesnva.github.io/goit-react-hw-08-phonebook/",
   "dependencies": {
+    "@mui/material": "^5.10.9",
+    "@mui/styled-engine-sc": "^5.10.6",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -20,7 +22,7 @@
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.6",
     "styled-system": "^5.1.5",
     "web-vitals": "^2.1.3"
   },

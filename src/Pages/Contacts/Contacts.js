@@ -7,6 +7,7 @@ import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
 import { Error } from 'components/Error/Error';
 import { ContactsList } from 'components/ContactsList/ContactsList';
+import { Title } from './ContactsStyled';
 
 function Contacts() {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ function Contacts() {
   return (
     <div>
       <ContactForm />
-      <h2>Contacts</h2>
+      <Title>Contacts</Title>
       <Filter />
       {isLoading && <Loader />}
       {error && <Error>Whoops! Something went wrong!</Error>}

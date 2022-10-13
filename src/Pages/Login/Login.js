@@ -1,6 +1,7 @@
 import { LoginForm, Label, LoginInput, Button } from './LoginStyled';
 import { useDispatch } from 'react-redux';
 import { logInUser } from 'redux/Authorization/Operations';
+import { Box } from 'Box';
 
 function Login() {
   const dispatch = useDispatch();
