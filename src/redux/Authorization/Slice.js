@@ -52,7 +52,7 @@ const authSlice = createSlice({
     [logOutUser.rejected]: handleRejected,
     [refreshUser.pending]: handlePending,
     [refreshUser.fulfilled](state, action) {
-      state.user = action.payload.user;
+      state.user = action.payload;
       state.isLoggedIn = true;
       state.isLoading = false;
       state.error = null;
