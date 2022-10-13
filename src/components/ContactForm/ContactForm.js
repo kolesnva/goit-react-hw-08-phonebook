@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Form, Label, Input, Text, AddButton } from './ContactFormStyled';
 import { nanoid } from 'nanoid';
-import { addContact } from 'redux/Operations';
-import { selectContacts } from 'redux/Selectors';
-import { useSelector, useDispatch } from 'react-redux/es/exports';
+import { addContact } from 'redux/Contacts/Operations';
+import { selectContacts } from 'redux/Contacts/Selectors';
+import { useSelector, useDispatch } from 'react-redux';
 
 export function ContactForm() {
   const [name, setName] = useState('');
