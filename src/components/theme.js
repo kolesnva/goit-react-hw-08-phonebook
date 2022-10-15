@@ -1,15 +1,12 @@
 export const theme = {
   colors: {
+    buttonBackground: '#0B89D5',
     black: '#000',
     white: '#fff',
-    text: '#494949',
-    background: '#fff',
-    primary: '#07c',
+    textSecondary: '#494949',
+    background: '#DCE1E4',
     secondary: '#05a',
-    accent: '#609',
-    muted: '#f6f6f6',
-    online: `#375623`,
-    offline: `#C00000`,
+    hover: '#0078BF',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -23,6 +20,7 @@ export const theme = {
     m: '16px',
     l: '18px',
     xl: '32px',
+    xxl: '64px',
   },
   fontWeights: {
     normal: 400,

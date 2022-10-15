@@ -1,5 +1,5 @@
 import { Loader } from 'components/Loader/Loader';
-import { Header, Title } from './SharedLayoutStyled';
+import { Header, Title, Container } from './SharedLayoutStyled';
 import { Navigation } from 'components/Navigation/Navigation';
 import { Menu } from 'components/Menu/Menu';
 import { Suspense } from 'react';
@@ -9,7 +9,7 @@ import { selectIsLoggedIn } from 'redux/Authorization/Selectors';
 
 export function SharedLayout() {
   return (
-    <div>
+    <Container>
       <Header>
         <Title>Phonebook</Title>
         {useSelector(selectIsLoggedIn) ? <Menu /> : <Navigation />}
@@ -17,6 +17,6 @@ export function SharedLayout() {
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
-    </div>
+    </Container>
   );
 }
