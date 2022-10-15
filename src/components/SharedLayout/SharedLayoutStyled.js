@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vw;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: auto;
   background-color: ${p => p.theme.colors.background};
   padding: ${p => p.theme.space[4]}px;
   border-radius: ${p => p.theme.radii.md};

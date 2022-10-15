@@ -4,10 +4,14 @@ export function Loader() {
   return (
     <Blocks
       visible={true}
-      height="80"
-      width="80"
+      height="360"
+      width="360"
       ariaLabel="blocks-loading"
-      wrapperStyle={{ justifyContent: 'center' }}
+      wrapperStyle={{
+        position: 'absolute',
+        top: '20%',
+        left: '40%',
+      }}
       wrapperClass="blocks-wrapper"
     />
   );
