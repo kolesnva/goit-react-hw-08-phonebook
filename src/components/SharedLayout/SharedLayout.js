@@ -6,11 +6,10 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/Authorization/Selectors';
-import { Box } from 'Box';
 
 export function SharedLayout() {
   return (
-    <Box>
+    <div>
       <Header>
         <Title>Phonebook</Title>
         {useSelector(selectIsLoggedIn) ? <Menu /> : <Navigation />}
@@ -18,6 +17,6 @@ export function SharedLayout() {
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
-    </Box>
+    </div>
   );
 }
