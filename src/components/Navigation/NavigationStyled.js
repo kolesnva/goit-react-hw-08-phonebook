@@ -17,8 +17,12 @@ export const NavItem = styled(NavLink)`
   border: none;
 
   &:hover,
-  :focus,
-  :active {
+  :focus {
+    background-color: ${p => p.theme.colors.hover};
+    border: none;
+    outline: none;
+  }
+  &.active {
     background-color: ${p => p.theme.colors.hover};
     border: none;
     outline: none;

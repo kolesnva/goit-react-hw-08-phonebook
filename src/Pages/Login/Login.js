@@ -1,4 +1,11 @@
-import { LoginForm, Label, LoginInput, Button } from './LoginStyled';
+import {
+  LoginForm,
+  Label,
+  LoginInput,
+  Button,
+  Container,
+  Title,
+} from './LoginStyled';
 import { useDispatch } from 'react-redux';
 import { logInUser } from 'redux/Authorization/Operations';
 
@@ -15,19 +22,20 @@ function Login() {
   };
 
   return (
-    <div>
+    <Container>
       <LoginForm onSubmit={handleSubmit}>
+        <Title>Please enter your credentials.</Title>
         <Label>
-          E-mail
+          E-mail:
           <LoginInput type="email" name="email" required />
         </Label>
         <Label>
-          Password
+          Password:
           <LoginInput type="password" name="password" required />
         </Label>
         <Button type="submit">Log In</Button>
       </LoginForm>
-    </div>
+    </Container>
   );
 }
 export default Login;
